@@ -1,7 +1,7 @@
 <template>
   <footer>
     <nav>
-      <div v-for="item in list" :key="item.index">
+      <div v-for="item in list" :key="item.index" :class="item.index==$store.state.base.activePIndex?'green':''" @click="tabClick(item.index)">
         <i :class="item.icon"></i>
         <p>{{item.name}}</p>
       </div>
@@ -37,6 +37,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    tabClick: function (index) {
+
+    }
   }
 }
 </script>
@@ -53,6 +58,9 @@ footer{
       height:100%;
       flex:1;
       @include center;
+    }
+    .green{
+      color:green;
     }
   }
 }

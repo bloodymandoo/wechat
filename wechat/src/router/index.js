@@ -12,32 +12,31 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'BaseP',
       component: BaseP,
-      children:[
+      children: [
         {
           path: '/',
-          redirect:'/MessageList'
+          redirect: '/MessageList'
         },
         {
           path: '/MessageList',
           name: 'MessageList',
-          component: MessageList,
+          component: MessageList
         },
         {
           path: '/FriendsList',
           name: 'FriendsList',
-          component: FriendsList,
+          component: FriendsList
         },
         {
           path: '/FindList',
           name: 'FindList',
-          component: FindList,
+          component: FindList
         },
         {
           path: '/My',
           name: 'My',
-          component: My,
+          component: My
         }
       ]
     }
