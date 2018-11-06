@@ -1,7 +1,7 @@
 <template>
   <footer>
     <nav>
-      <div v-for="item in list" :key="item.index" :class="item.index==$store.state.base.activePIndex?'green':''" @click="tabClick(item.index)">
+      <div v-for="item in list" :key="item.index" :class="item.index==$store.state.base.activeIndex?'green':''" @click="tabClick(item.index)">
         <i :class="item.icon"></i>
         <p>{{item.name}}</p>
       </div>
@@ -13,34 +13,39 @@
 export default {
   name: 'Footer',
   data () {
+    console.log(this.$store)
     return {
       list: [
         {
           index: 0,
           icon: '',
-          name: '微信'
+          name: '微信',
+          url: '/MessageList'
         },
         {
           index: 1,
           icon: '',
-          name: '通讯录'
+          name: '通讯录',
+          url: '/FriendsList'
         },
         {
           index: 2,
           icon: '',
-          name: '发现'
+          name: '发现',
+          url: '/FindList'
         },
         {
           index: 3,
           icon: '',
-          name: '我'
+          name: '我',
+          url: '/My'
         }
       ]
     }
   },
   methods: {
     tabClick: function (index) {
-
+      this.$store.commit('update_activeP', {index: index})
     }
   }
 }

@@ -49,7 +49,7 @@ export default {
     My
   },
   mounted () {
-    this.$store.commit('init_swiper', {name: 'swiper-container'})
+    this.$store.dispatch('init_swiper', {name: 'swiper-container'})
   }
 }
 </script>
