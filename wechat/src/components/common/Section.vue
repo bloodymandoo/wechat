@@ -68,6 +68,7 @@ section{
       .swiper-slide{
         height:100%;
         width:100% !important;
+        display: flex;
       }
     }
   }

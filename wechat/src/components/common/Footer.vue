@@ -13,7 +13,6 @@
 export default {
   name: 'Footer',
   data () {
-    console.log(this.$store)
     return {
       list: [
         {

@@ -2,6 +2,7 @@ $font-size:37.5;
 $headerColor:#fff;
 $headerBgColor:#2e3238;
 $footerBorColor:gray;
+
 @function px2rem($px){
   @return $px/$font-size*1rem;
 }
@@ -11,5 +12,8 @@ $footerBorColor:gray;
   align-items: center;
 }
 @mixin navHei{
+  height:px2rem(120);
+}
+@mixin messageHei{
   height:px2rem(120);
 }
