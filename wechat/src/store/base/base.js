@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import VueScroller from 'vue-scroller'
 
 export default {
   state: {
@@ -13,6 +14,7 @@ export default {
   },
   actions: {
     init_swiper (context, {name}) {
+      console.log(VueScroller)
       context.state.swiper = new Swiper('.' + name, {
         resistanceRatio: 0 // 左右滑动空隙取消
       })

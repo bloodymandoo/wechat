@@ -32,9 +32,10 @@ export default {
       arr = arr.map(function (item, index) {
         return {
           id: index,
-          img: 'aa',
-          title: 'bb',
-          detail: 'cc',
+          img: require('@/assets/logo.png'),
+          title: '焦点资讯',
+          detail: '微课:[学习vue]',
+          time: '昨天20:42',
           isAlarm: false
         }
       })
