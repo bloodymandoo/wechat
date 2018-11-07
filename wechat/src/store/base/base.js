@@ -13,7 +13,9 @@ export default {
   },
   actions: {
     init_swiper (context, {name}) {
-      context.state.swiper = new Swiper('.' + name, {})
+      context.state.swiper = new Swiper('.' + name, {
+        resistanceRatio: 0 // 左右滑动空隙取消
+      })
       context.state.swiper.on('slideChange', function () {
         context.state.activeIndex = context.state.swiper.activeIndex
       })
