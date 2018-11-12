@@ -1,5 +1,10 @@
 <template>
    <scroller class="friendList">
+     <Friend
+    v-for="item in friendData"
+    :key="item.id"
+    :friend="item"
+    ></Friend>
     <Friend
     v-for="item in friendList"
     :key="item.id"
@@ -10,10 +15,12 @@
 
 <script>
 import Friend from '@/pages/friends/Friend'
+import friendData from '@/pages/friends/friendData'
 export default {
   name: 'FriendsList',
   data () {
     return {
+      friendData: friendData
       // friendList: []
     }
   },
